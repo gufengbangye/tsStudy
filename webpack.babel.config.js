@@ -13,17 +13,20 @@ module.exports = {
     rules: [
       {
         test: /\.ts$/,
-        loader: "ts-loader",
-        exclude: /.node_modules/,
+        loader: "babel-loader",
         options: {
-          appendTsSuffixTo: [/\.vue$/],
+          presets: [ 
+          'babel-preset-typescript-vue3',
+          "@babel/preset-typescript",
+          "@babel/preset-env"]
         },
+        exclude: /.node_modules/
       },
       {
         test: /\.vue$/,
         loader: "vue-loader",
       },
-    ],
+    ]
   },
   mode: "development",
   resolve: {
