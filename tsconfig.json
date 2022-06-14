@@ -1,3 +1,6 @@
 {
-    "compilerOptions": {}
+    "compilerOptions": {
+        "noImplicitAny": true, //不允许隐式的any
+        "strictNullChecks": true //是否允许值为null
+    }
 }
